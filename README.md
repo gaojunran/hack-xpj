@@ -11,7 +11,7 @@
 
 2. 此脚本依赖微信 H5 调试，请自行查询微信 H5 调试的方式。
 
-  - 安卓手机参阅 https://blog.csdn.net/qq_35189120/article/details/145408765（这个方法好像不能用了）。
+  - 安卓手机参阅 https://blog.csdn.net/qq_35189120/article/details/145408765 （这个方法好像不能用了）。
   - Windows 参阅 https://www.bilibili.com/video/BV1neBvBhEGo 。
 
 
