@@ -3,7 +3,8 @@
 > [!CAUTION]
 > 此脚本仅用于学习交流，请勿用于其他用途。
 
-![alt text](image.png)
+<img width="550" height="592" alt="image" src="https://github.com/user-attachments/assets/b71c926a-487c-4da1-8625-e7720e92a8df" />
+
 
 ## 前提
 
