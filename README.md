@@ -6,21 +6,25 @@
 <img width="550" height="592" alt="image" src="https://github.com/user-attachments/assets/b71c926a-487c-4da1-8625-e7720e92a8df" />
 
 
-## 前提
-
-1. 此脚本的使用方法比较复杂，适用于**喜欢折腾且有一定基础**的同学。因为新版学评教只能在微信 H5 中打分，所以无法做成一个浏览器插件，只能通过调试功能来使用。
-
-2. 此脚本依赖微信 H5 调试，请自行查询微信 H5 调试的方式。
-
-  - 安卓手机参阅 https://blog.csdn.net/qq_35189120/article/details/145408765 （这个方法好像不能用了）。
-  - Windows 参阅 https://www.bilibili.com/video/BV1neBvBhEGo 。
-
-
 ## 使用方法
 
-1. 使用微信打开新版重邮学评教。设法连入微信 H5 调试。
+### 第一步：伪造微信环境
 
-2. 将 [index.js](index.js) 中的全部内容粘进 Console 中。
+由于学评教网站限制了必须使用微信浏览器登录，但又没使用任何微信的开放能力（不知道何意味），我们可以简单地伪造 UA 让服务端认为现在是微信环境。
+
+对于小白用户来说，可以浏览器扩展商店安装 [ModHeader](https://chromewebstore.google.com/detail/modheader-modify-http-hea/idgpnmonknjnojddfkpgkljpfnnfcklj)，添加一个 `Request Header`，`name` 为 `User-Agent`，`value` 为：
+
+```
+Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X)
+AppleWebKit/605.1.15 (KHTML, like Gecko)
+Mobile/15E148 MicroMessenger/8.0.0
+```
+
+然后用浏览器访问 [学评教网站](http://jwzxm.cqupt.edu.cn/mjwzx2022/tysfrz/index.php?re=xpj)，发现不受微信浏览器登录的限制了。
+
+### 第二步：注入代码
+
+F12 打开控制台 -> 将 [index.js](index.js) 中的代码粘贴到控制台中并执行。
 
 ## 实现原理
 
