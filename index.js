@@ -61,7 +61,7 @@
         .forEach(([, arr]) =>
           arr.forEach((item) => {
             if (item?.orderNum != null) {
-              scoreDetail[item.orderNum - 1] = { orderNum: item.orderNum, score: 10 };
+              scoreDetail[item.orderNum - 1] = { orderNum: item.orderNum, score: Math.random() < 0.5 ? 8 : 10 };  // sb 学评教
             }
           })
         );
